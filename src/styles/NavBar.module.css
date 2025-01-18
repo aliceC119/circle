@@ -2,3 +2,12 @@
     background-color: #ffffff;
     border: 1px solid #dadadf;
   }
+
+  .NavLink {
+    padding: 5px;
+  }
+  
+  /* Dont know how to change color of the Home, Sign in and Sign up at the navbar. */
+  .Active i {
+    color: #c38f96;
+  }
