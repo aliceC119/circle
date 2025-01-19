@@ -35,6 +35,18 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
+  /* Could be added a videoPost icon?
+  
+  const addVideoPostIcon = (
+    <NavLink
+      className={styles.NavLink}
+      activeClassName={styles.Active}
+      to="/posts/create"
+    >
+      <i className="far fa-plus-square"></i>Add post
+    </NavLink>
+  );*/
+
   const loggedInIcons = (
     <>
       <NavLink
