@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
+
 const Post = (props) => {
   const {
     id,
@@ -38,7 +39,8 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+    /* the like function doesn't work!*/
+      console.log("Like error:",err);
     }
   };
 
@@ -54,7 +56,8 @@ const Post = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+     /* the like function doesn't work!*/
+      console.log("Unlike error:", err);
     }
   };
 
