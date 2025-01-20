@@ -23,10 +23,9 @@ function VideoPostCreateForm() {
   const [postData, setPostData] = useState({
     title: "",
     description: "",
-    video_url: "",
-    youtube_url: "", // Add YouTube URL field
+    youtube_url: "", 
   });
-  const { title, description, video_url, youtube_url } = postData;
+  const { title, description, youtube_url } = postData;
 
   const history = useHistory();
 
@@ -43,7 +42,6 @@ function VideoPostCreateForm() {
 
     formData.append("title", title);
     formData.append("description", description);
-    formData.append("video_url", video_url);
     formData.append("youtube_url", youtube_url); // Add YouTube URL to form data
 
     try {
@@ -85,21 +83,6 @@ function VideoPostCreateForm() {
         />
       </Form.Group>
       {errors?.description?.map((message, idx) => (
-        <Alert variant="warning" key={idx}>
-          {message}
-        </Alert>
-      ))}
-
-      <Form.Group>
-        <Form.Label>Video URL</Form.Label>
-        <Form.Control
-          type="text"
-          name="video_url"
-          value={video_url}
-          onChange={handleChange}
-        />
-      </Form.Group>
-      {errors?.video_url?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
