@@ -47,8 +47,8 @@ function VideoPostCreateForm() {
     formData.append("youtube_url", youtube_url); // Add YouTube URL to form data
 
     try {
-      const { data } = await axiosReq.post("/videoposts/", formData);
-      history.push(`/videoposts/${data.id}`);
+      const { data } = await axiosReq.post("/video-posts/", formData);
+      history.push(`/video-posts/${data.id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
