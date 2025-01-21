@@ -41,7 +41,7 @@ const Post = (props) => {
     }
   };
 /* How to add all those posts /video posts, shared posts and shared video poststo handleLike function)*/
-  /*const handleLike = async () => {
+  const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
@@ -55,8 +55,12 @@ const Post = (props) => {
     } catch (err) {
       console.log(err);
     }
-  };*/
-  const handleLike = async () => {
+  };
+
+  
+
+
+  /*const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
       console.log('Request Data:', { post: id });  // Log the request data
@@ -96,7 +100,7 @@ const Post = (props) => {
     } catch (err) {
       console.log('Error:', err.response ? err.response.data : err.message);  // Log the error response
     }
-  };
+  };*/
   
   
  
