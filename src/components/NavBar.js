@@ -106,8 +106,14 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon}
-        {addVideoPostIcon}
+        {/*{currentUser && addPostIcon}*/}
+        {currentUser && (
+          <>
+          {addPostIcon}
+          {addVideoPostIcon}
+          </>
+        )}
+        
         
         <Navbar.Toggle
           ref={ref}
