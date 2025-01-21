@@ -35,17 +35,17 @@ const NavBar = () => {
       <i className="far fa-plus-square"></i>Add post
     </NavLink>
   );
-  /* Could be added a videoPost icon?
+  /* Could be added a videoPost icon? */
   
   const addVideoPostIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
-      to="/posts/create"
+      to="/videoposts/create"
     >
-      <i className="far fa-plus-square"></i>Add post
+      <i className="far fa-plus-square"></i>Add video post
     </NavLink>
-  );*/
+  );
 
   const loggedInIcons = (
     <>
@@ -107,6 +107,8 @@ const NavBar = () => {
           </Navbar.Brand>
         </NavLink>
         {currentUser && addPostIcon}
+        {addVideoPostIcon}
+        
         <Navbar.Toggle
           ref={ref}
           onClick={() => setExpanded(!expanded)}
