@@ -40,7 +40,7 @@ const Post = (props) => {
       console.log(err);
     }
   };
-/* How to add all those posts /video posts, shared posts and shared video poststo handleLike function)*/
+/* How to add all those posts /video posts to handleLike function)*/
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
@@ -58,52 +58,6 @@ const Post = (props) => {
   };
 
   
-
-
-  /*const handleLike = async () => {
-    try {
-      const { data } = await axiosRes.post("/likes/", { post: id });
-      console.log('Request Data:', { post: id });  // Log the request data
-      console.log('Response Data:', data);  // Log the response data
-  
-      setPosts((prevPosts) => ({
-        ...prevPosts,
-        results: prevPosts.results.map((post) => {
-          if (post.id === id) {
-            const updatedPost = {
-              ...post,
-              likes_count: post.likes_count + 1,
-              like_id: data.id,
-            };
-  
-            if (post.shared_post) {
-              updatedPost.shared_post = {
-                ...post.shared_post,
-                likes_count: post.shared-post.likes_count + 1,
-                like_id: data.id,
-              };
-            }
-  
-            if (post.shared_video_post) {
-              updatedPost.shared_video_post = {
-                ...post.shared_video_post,
-                likes_count: post.shared_video_post.likes_count + 1,
-                like_id: data.id,
-              };
-            }
-  
-            return updatedPost;
-          }
-          return post;
-        }),
-      }));
-    } catch (err) {
-      console.log('Error:', err.response ? err.response.data : err.message);  // Log the error response
-    }
-  };*/
-  
-  
- 
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/${like_id}/`);
