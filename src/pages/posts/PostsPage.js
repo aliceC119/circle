@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
+import VideoPost from "./VideoPost";
 import Asset from "../../components/Assets";
 
 import appStyles from "../../App.module.css";
@@ -27,13 +28,38 @@ function PostsPage({ message, filter = "" }) {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-        setPosts(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
+    // const fetchPosts = async () => {
+    //  try {
+    //    const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+    //    setPosts(data);
+    //    setHasLoaded(true);
+    //  } catch (err) {
+    //    console.log(err);
+    //  }
+
+    try {
+      // Fetch regular posts
+      const { data: postsData } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+    //  const postsData = postsResponse.data;
+      
+      // Fetch video posts
+      const { data: videoPostsData } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
+    //  const videoPostsData = videoPostsResponse.data;
+
+      // Combine results
+
+      const combinedResults = [...postsData.results, ...videoPostsData.results];
+        
+    // Sort combined results by created_at date (newest first)
+    combinedResults.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+
+      console.log("Fetched combined posts:", combinedResults); // Log fetched combined posts
+      setPosts({ results: combinedResults });
+      setHasLoaded(true);
+    } catch (err) {
+      console.log(err);
+    }
+      
     };
 
     setHasLoaded(false);
@@ -75,13 +101,27 @@ function PostsPage({ message, filter = "" }) {
                 loader={<Asset spinner />}
                 hasMore={!!posts.next}
                 next={() => fetchMoreData(posts, setPosts)}
-              />
+//#             />
+        
+            //#code to allow created video posts to be displayed along with posts on Home?
+              >
+                {posts.results.map((post) =>
+                  post.type === "video" ? (
+                    <VideoPost key={post.id} {...post} setPosts={setPosts} />
+                  ) : (
+                    <Post key={post.id} {...post} setPosts={setPosts} />
+                  )
+                )}
+              </InfiniteScroll>
+
             ) : (
               <Container className={appStyles.Content}>
                 <Asset src={NoResults} message={message} />
               </Container>
             )}
           </>
+
+
         ) : (
           <Container className={appStyles.Content}>
             <Asset spinner />

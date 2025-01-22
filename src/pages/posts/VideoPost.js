@@ -40,7 +40,7 @@ const VideoPost = (props) => {
       console.log(err);
     }
   };
-
+/* handleLike for video post */
   const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
