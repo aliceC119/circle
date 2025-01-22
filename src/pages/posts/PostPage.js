@@ -18,10 +18,12 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Assets";
 import { fetchMoreData } from "../../utils/utils";
 
-
+/* display video post in the leave a comment page. */
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
+  /*const [video_post, setVideoPost] = useState({ results: [] });*/
+  const [postType] = useState(null);
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -31,7 +33,9 @@ function PostPage() {
     const handleMount = async () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
-          axiosReq.get(`/posts/${id}`),
+          postType === "video"
+            ? axiosReq.get(`/video-posts/${id}`)
+            : axiosReq.get(`/posts/${id}`),
           axiosReq.get(`/comments/?post=${id}`),
         ]);
         console.log(post);
@@ -43,7 +47,7 @@ function PostPage() {
     };
 
     handleMount();
-  }, [id]);
+  }, [id, postType]);
 
   return (
     <Row className="h-100">
