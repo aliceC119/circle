@@ -41,7 +41,7 @@ const VideoPost = (props) => {
     }
   };
 /* handleLike for video post */
-  const handleLike = async () => {
+const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/", { post: id });
       setPosts((prevPosts) => ({
@@ -53,9 +53,20 @@ const VideoPost = (props) => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      if(err.response) {
+        console.log('Response data:', err.response.data);
+        console.log('Response status:', err.response.status);
+        console.log('Response headers:', err.response.headers);
+      } else if(err.request) {
+        console.log('Request data:', err.request);
+      } else {
+        console.log('Error message:', err.message);
+      }
     }
-  };
+
+};
+
+  
 
   const handleUnlike = async () => {
     try {
@@ -93,6 +104,7 @@ const VideoPost = (props) => {
         </Media>
       </Card.Body>
       <Card.Body>
+
         <div className={styles.VideoWrapper}>
           <iframe
             width="100%"
@@ -104,6 +116,7 @@ const VideoPost = (props) => {
             title={title}
           ></iframe>
         </div>
+        
         {title && <Card.Title className="text-center">{title}</Card.Title>}
         {description && <Card.Text>{description}</Card.Text>}
         <div className={styles.PostBar}>
@@ -119,7 +132,7 @@ const VideoPost = (props) => {
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={handleLike}>
+            <span onClick={() => handleLike(true)}>{/* true for video posts */ }
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (

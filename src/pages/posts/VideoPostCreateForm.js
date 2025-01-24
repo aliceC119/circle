@@ -40,9 +40,15 @@ function VideoPostCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
+    const videoIdMatch = youtube_url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    const videoId = videoIdMatch ? videoIdMatch[1] : youtube_url;
+  
+
     formData.append("title", title);
     formData.append("description", description);
-    formData.append("youtube_url", youtube_url); // Add YouTube URL to form data
+    formData.append("youtube_url", `https://www.youtube.com/embed/${videoId}`); // Use the video ID in the embed URL
+
+   
 
     try {
       const { data } = await axiosReq.post("/video-posts/", formData);
