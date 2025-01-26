@@ -61,7 +61,18 @@ List od Epics:
 | [#26](https://github.com/aliceC119/circle/issues/26) | As a logged in user I can I can edit my profile so that I can change my profile picture and bio| Done |
 | [#27](https://github.com/aliceC119/circle/issues/27) | As a user I can click on the copy link button so that copy the post/ video post by getting the URL links| Done |
 
+### Design 
 
++ Wireframes
+
+### Structure
+
+All information about the structure can be found in the README of the API [here](https://github.com/aliceC119/drf-api-circle)
+
+### These are features that I would like to add to this project in the future.
++ Share a Post / Video Post: Allow users to share the post/video without following the owner of the post/video.
++ Create groups: Help group users with similar interests and increase their engagement and connection within Circle.
++ Chat function: Allows users to communicate with specific users in a private environment to build a deeper connection.
 
 
 
