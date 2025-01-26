@@ -8,7 +8,7 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import Post from "./Post";
-import VideoPost from "./VideoPost";
+
 import Comment from "../comments/Comment";
 
 import CommentCreateForm from "../comments/CommentCreateForm";
@@ -18,12 +18,10 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Assets";
 import { fetchMoreData } from "../../utils/utils";
 
-/* display video post in the leave a comment page. */
+/* display post in the leave a comment page. */
 function PostPage() {
   const { id } = useParams();
   const [post, setPost] = useState({ results: [] });
-  /*const [video_post, setVideoPost] = useState({ results: [] });*/
-  const [postType] = useState(null);
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -33,35 +31,24 @@ function PostPage() {
     const handleMount = async () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
-          postType === "video"
-            ? axiosReq.get(`/video-posts/${id}`)
-            : axiosReq.get(`/posts/${id}`),
-          axiosReq.get(`/comments/?post=${id}`),
+          axiosReq.get(`/posts/${id}`),
+          axiosReq.get(`/comments/posts?post=${id}`),
         ]);
-        console.log(post);
         setPost({ results: [post] });
         setComments(comments);
       } catch (err) {
-        console.log(err);
+       //console.log(err);
       }
     };
 
     handleMount();
-  }, [id, postType]);
+  }, [id]);
 
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
-        {post.results[0]?.youtube_url ? (  // Check if it's a video post, but the created youtube url video posts are not showing up on Home
-
-          <VideoPost {...post.results[0]} setPosts={setPost} postPage />
-
-        ) : (
-
-          <Post {...post.results[0]} setPosts={setPost} postPage />
-
-        )}
+        <Post {...post.results[0]} setPosts={setPost} postPage />
 
         <Container className={appStyles.Content}>
           {currentUser ? (

@@ -31,7 +31,7 @@ function CommentCreateForm(props) {
     console.log("Post ID:", post);
     console.log("Video Post ID:", video_post);
   
-      const { data } = await axiosRes.post("/comments/", {
+      const { data } = await axiosRes.post("/comments/posts/", {
         content,
         post,
         

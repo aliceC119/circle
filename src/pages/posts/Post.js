@@ -47,7 +47,7 @@ const Post = (props) => {
 /* How to add all those posts to handleLike function)*/
 const handleLike = async () => {
   try {
-    const { data } = await axiosRes.post("/likes/", { post: id });
+    const { data } = await axiosRes.post("/likes/posts/", { post: id });
     setPosts((prevPosts) => ({
       ...prevPosts,
       results: prevPosts.results.map((post) => {

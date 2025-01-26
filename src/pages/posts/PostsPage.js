@@ -30,7 +30,7 @@ function PostsPage({ message, filter = "" }) {
     const fetchPosts = async () => {
     // const fetchPosts = async () => {
       try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+        const { data } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
         setPosts(data);
         setHasLoaded(true);
       } catch (err) {
