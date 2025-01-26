@@ -19,11 +19,11 @@ Circle is a social platform for individuals who are passionate about their inter
 
 List od Epics:
    + Epic 1: Navigation and authentication
-   + Epic 2: The Posts Page
-   + Epic 3: The Post Page
-   + Epic 4: The VideoPost Page
-   + Epic 5: Liking and disliking Posts
-   + Epic 6: Likeing and disliking VideoPosts
+   + Epic 2: Adding and liking or disliking Posts
+   + Epic 3: Adding and liking ot disliking VideoPosts
+   + Epic 4: The Posts Page
+   + Epic 5: The Post Page
+   + Epic 6: The VideoPost Page
    + Epic 7: The Comment Page
    + Epic 8: Adding and deleting a comment on a Post
    + Epic 9: Adding and deleting a comment on a VideoPost
