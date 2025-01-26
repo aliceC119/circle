@@ -8,6 +8,19 @@ The Circle frontend, built with React, is the user interface of the drf-api-circ
 
 -----
 ## Table of contents
++ [User Experience](https://github.com/aliceC119/circle/blob/main/README.md#user-experience)
+   - [Epics](https://github.com/aliceC119/circle?tab=readme-ov-file#epics)
+   - [User Story](https://github.com/aliceC119/circle?tab=readme-ov-file#user-story)
++ [Design](https://github.com/aliceC119/circle?tab=readme-ov-file#design)
+   - Wireframes
++ [Structure](https://github.com/aliceC119/circle?tab=readme-ov-file#structure)
++ [Feature](https://github.com/aliceC119/circle?tab=readme-ov-file#these-are-features-that-i-would-like-to-add-to-this-project-in-the-future)
++ [Technologies Used](https://github.com/aliceC119/circle?tab=readme-ov-file#technologies-used)
+   - [Languages](https://github.com/aliceC119/circle?tab=readme-ov-file#languages)
+   - [Tools](https://github.com/aliceC119/circle?tab=readme-ov-file#tools)
+   - [Libraries](https://github.com/aliceC119/circle?tab=readme-ov-file#libraries)
++ [Deployment](https://github.com/aliceC119/circle?tab=readme-ov-file#deployment)
++ [Credits](https://github.com/aliceC119/circle?tab=readme-ov-file#credits)
 
 ### User experience 
 
@@ -69,7 +82,8 @@ List od Epics:
 
 All information about the structure can be found in the README of the API [here](https://github.com/aliceC119/drf-api-circle)
 
-### These are features that I would like to add to this project in the future.
+### Feature
+These are features that I would like to add to this project in the future.
 + Share a Post / Video Post: Allow users to share the post/video without following the owner of the post/video.
 + Create groups: Help group users with similar interests and increase their engagement and connection within Circle.
 + Chat function: Allows users to communicate with specific users in a private environment to build a deeper connection.
@@ -136,6 +150,8 @@ Choose `main` as the branch to deploy and click on 'Deploy Branch'. You can do t
 The app can be found by clicking the 'Open App' button in the top right corner with the Heroku URL configuration as follows: https://*.herokuapp.com
 
 <img width="1481" alt="Screenshot 2025-01-26 at 15 08 10" src="https://github.com/user-attachments/assets/0edc5938-3840-4b76-ad99-601ebad24482" />
+
+-------
 
 ## Credits
 
