@@ -74,6 +74,23 @@ All information about the structure can be found in the README of the API [here]
 + Create groups: Help group users with similar interests and increase their engagement and connection within Circle.
 + Chat function: Allows users to communicate with specific users in a private environment to build a deeper connection.
 
+## Technologies Used
+
+### Languages:
++ CSS
++ JavaScript
++ JSX
+
+### Tools:
++ [GitHub](https://github.com/)
++ [CodeInstitute IDE - Gitpod](https://codeinstitute-ide.net/workspaces)
++ [Heroku](https://www.heroku.com/)
++ [Code Institue Database Maker](https://dbs.ci-dbs.net/)
++ [Fontawesome](https://fontawesome.com/)
++ [Pexels](https://www.pexels.com/)
++ [Cloudinary](https://cloudinary.com/)
++ [Canva](https://www.canva.com/)
++ [Favison.io](https://favicon.io/)
 
 
 
