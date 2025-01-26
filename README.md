@@ -19,6 +19,7 @@ The Circle frontend, built with React, is the user interface of the drf-api-circ
    - [Languages](https://github.com/aliceC119/circle?tab=readme-ov-file#languages)
    - [Tools](https://github.com/aliceC119/circle?tab=readme-ov-file#tools)
    - [Libraries](https://github.com/aliceC119/circle?tab=readme-ov-file#libraries)
+
 + [Deployment](https://github.com/aliceC119/circle?tab=readme-ov-file#deployment)
 + [Credits](https://github.com/aliceC119/circle?tab=readme-ov-file#credits)
 
@@ -112,6 +113,8 @@ These are features that I would like to add to this project in the future.
 + [React Bootstrap](https://react-bootstrap.netlify.app/)
 + [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
 
+### Testing 
+## Validator Testing
 
 ## Deployment
 
