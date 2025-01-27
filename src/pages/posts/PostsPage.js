@@ -29,36 +29,36 @@ function PostsPage({ message, filter = "" }) {
   useEffect(() => {
     const fetchPosts = async () => {
     // const fetchPosts = async () => {
-      try {
-        const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-        setPosts(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
+    //  try {
+    //    const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+    //   setPosts(data);
+    //    setHasLoaded(true);
+    //  } catch (err) {
+    //    console.log(err);
+    //  }
 
-    //try {
+    try {
       // Fetch regular posts
-    //  const { data: postsData } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-    //  const postsData = postsResponse.data;
+      const { data: postsResponse } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+      const postsData = postsResponse.data;
       
       // Fetch video posts
-    //  const { data: videoPostsData } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
-    //  const videoPostsData = videoPostsResponse.data;
+      const { data: videoPostsResponse } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
+      const videoPostsData = videoPostsResponse.data;
 
       // Combine results
 
-    //  const combinedResults = [...postsData.results, ...videoPostsData.results];
+      const combinedResults = [...postsData.results, ...videoPostsData.results];
         
-    // Sort combined results by created_at date (newest first)
-    //combinedResults.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      //Sort combined results by created_at date (newest first)
+      combinedResults.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
-    //  console.log("Fetched combined posts:", combinedResults); // Log fetched combined posts
-    //  setPosts({ results: combinedResults });
-    //  setHasLoaded(true);
-    //} catch (err) {
-    //  console.log(err);
-    //}
+      console.log("Fetched combined posts:", combinedResults); // Log fetched combined posts
+      setPosts({ results: combinedResults });
+      setHasLoaded(true);
+    } catch (err) {
+      console.log(err);
+    }
       
     };
 
@@ -94,7 +94,10 @@ function PostsPage({ message, filter = "" }) {
           <>
             {posts.results.length ? (
               <InfiniteScroll
-                children={posts.results.map((post) => (
+                children={posts.results.map((post) => 
+                  post.type === "video" ? (
+                  <VideoPost key={post.id} {...post} setPosts={setPosts} />  
+                  ) : (
                   <Post key={post.id} {...post} setPosts={setPosts} />
                 ))}
                 dataLength={posts.results.length}
