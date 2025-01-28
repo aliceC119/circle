@@ -38,12 +38,12 @@ function VideoPostCreateForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
+    
 
     const videoIdMatch = youtube_url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-    const videoId = videoIdMatch ? videoIdMatch[1] : youtube_url;
+    const videoId = videoIdMatch ? videoIdMatch[1] : null;
   
-
+    const formData = new FormData();
     formData.append("title", title);
     formData.append("description", description);
     formData.append("youtube_url", `https://www.youtube.com/embed/${videoId}`); // Use the video ID in the embed URL
