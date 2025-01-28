@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/VideoPost.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip } from "react-bootstrap";
+import { Card, Media, OverlayTrigger, Tooltip, Container} from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 import { MoreDropdown } from "../../components/MoreDropdown";
+import VideoPostComment from "../comments/VideoPostComment";
 
 const VideoPost = (props) => {
   const {
@@ -27,6 +28,8 @@ const VideoPost = (props) => {
   const currentUser = useCurrentUser();
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
+  const [comments, setComments] = useState([]);
+  
 
   const handleEdit = () => {
     history.push(`/video-posts/${id}/edit`);
@@ -83,6 +86,20 @@ const handleLike = async () => {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const { data } = await axiosRes.get(`/comments/videoposts/${id}`);
+        console.log("Fetched comments:", data); // Log fetched comments
+        setComments(data.results);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchComments();
+  }, [id]);
 
   return (
     <Card className={styles.Post}>
@@ -149,6 +166,12 @@ const handleLike = async () => {
           </Link>
           {comments_count}
         </div>
+        <Container>
+          {comments.map((comment) => (
+            <VideoPostComment key={comment.id} {...comment} setComments={setComments} setVideoPost={setPosts} />
+          ))}
+        </Container>
+        
       </Card.Body>
     </Card>
   );

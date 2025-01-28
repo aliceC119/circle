@@ -9,7 +9,7 @@ import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
 
 function CommentCreateForm(props) {
-  const { post, video_post, setPost, setComments, profileImage, profile_id } = props;
+  const { post, setPost, setComments, profileImage, profile_id } = props;
   const [content, setContent] = useState("");
 
   const handleChange = (event) => {
@@ -19,22 +19,10 @@ function CommentCreateForm(props) {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Ensure that either post or video_post is defined
-  if (!post && !video_post) {
-    console.error("Either 'post' or 'video_post' must be defined.");
-    return;
-  }
-
-  try {
-    // Log the request payload for debugging
-    console.log("Submitting comment with content:", content);
-    console.log("Post ID:", post);
-    console.log("Video Post ID:", video_post);
-  
+    try {
       const { data } = await axiosRes.post("/comments/posts/", {
         content,
         post,
-        
       });
       setComments((prevComments) => ({
         ...prevComments,
@@ -53,7 +41,6 @@ function CommentCreateForm(props) {
       console.log(err);
     }
   };
-
   return (
     <Form className="mt-2" onSubmit={handleSubmit}>
       <Form.Group>
