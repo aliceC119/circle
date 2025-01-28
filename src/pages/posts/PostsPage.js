@@ -27,38 +27,38 @@ function PostsPage({ message, filter = "" }) {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const fetchPosts = async () => {
-    // const fetchPosts = async () => {
-    //  try {
-    //    const { data } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-    //   setPosts(data);
-    //    setHasLoaded(true);
-    //  } catch (err) {
-    //    console.log(err);
-    //  }
-
-    try {
+    
+     const fetchPosts = async () => {
+      try {
+        const { data } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
+       setPosts(data);
+        setHasLoaded(true);
+      } catch (err) {
+        console.log(err);
+      }
+    //const fetchPosts = async () => {
+    //try {
       // Fetch regular posts
-      const { data: postsResponse } = await axiosReq.get(`/posts/?${filter}search=${query}`);
-      const postsData = postsResponse.data;
+    //  const { data: postsResponse } = await axiosReq.get(`/posts/?${filter}search=${query}`);
+    //  const postsData = postsResponse.data;
       
       // Fetch video posts
-      const { data: videoPostsResponse } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
-      const videoPostsData = videoPostsResponse.data;
+    //  const { data: videoPostsResponse } = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
+    //  const videoPostsData = videoPostsResponse.data;
 
       // Combine results
 
-      const combinedResults = [...postsData.results, ...videoPostsData.results];
+    //  const combinedResults = [...postsData.results, ...videoPostsData.results];
         
       //Sort combined results by created_at date (newest first)
-      combinedResults.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+    //  combinedResults.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
-      console.log("Fetched combined posts:", combinedResults); // Log fetched combined posts
-      setPosts({ results: combinedResults });
-      setHasLoaded(true);
-    } catch (err) {
-      console.log(err);
-    }
+    //  console.log("Fetched combined posts:", combinedResults); // Log fetched combined posts
+    //  setPosts({ results: combinedResults });
+    //  setHasLoaded(true);
+    //} catch (err) {
+    //  console.log(err);
+    //}
       
     };
 
