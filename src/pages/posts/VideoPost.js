@@ -161,7 +161,7 @@ const handleLike = async () => {
             </OverlayTrigger>
           )}
           {likes_count}
-          <Link to={`/videoposts/${id}`}>
+          <Link to={`/video-posts/${id}`}>
             <i className="far fa-comments" />
           </Link>
           {comments_count}

@@ -6,8 +6,8 @@ import appStyles from "../../App.module.css";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import VideoPost from "./VideoPost";
-import Comment from "../comments/Comment";
-import CommentCreateForm from "../comments/CommentCreateForm";
+import VideoPostComment from "../comments/VideoPostComment";
+import VideoPostCommentCreateForm from "../comments/VideoPostCommentCreateForm";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Assets";
@@ -27,7 +27,7 @@ const VideoPostPage = () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/video-posts/${id}`),
-          axiosReq.get(`/comments/posts?post=${id}`),
+          axiosReq.get(`/comments/videoposts?post=${id}`),
         ]);
         setPost({ results: [post] });
         setComments(comments);
@@ -50,11 +50,11 @@ const VideoPostPage = () => {
 
       <Container className={appStyles.Content}>
         {currentUser ? (
-          <CommentCreateForm
+          <VideoPostCommentCreateForm
             profile_id={currentUser.profile_id}
             profileImage={profile_image}
-            post={id}
-            setPost={setPost}
+            videopost={id}
+            setVideoPost={setPost}
             setComments={setComments}
           />
         ) : comments.results.length ? (
@@ -64,7 +64,7 @@ const VideoPostPage = () => {
         {comments.results.length ? (
           <InfiniteScroll
             children={comments.results.map((comment) => (
-              <Comment
+              <VideoPostComment
                 key={comment.id}
                 {...comment}
                 setPost={setPost}
