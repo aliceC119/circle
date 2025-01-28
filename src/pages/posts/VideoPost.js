@@ -43,7 +43,7 @@ const VideoPost = (props) => {
 /* handleLike for video post */
 const handleLike = async () => {
     try {
-      const { data } = await axiosRes.post("/likes/", { post: id });
+      const { data } = await axiosRes.post("/likes/videoposts/", { video_post: id });
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
@@ -70,7 +70,7 @@ const handleLike = async () => {
 
   const handleUnlike = async () => {
     try {
-      await axiosRes.delete(`/likes/${like_id}/`);
+      await axiosRes.delete(`/likes/videoposts/${like_id}/`);
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {

@@ -91,39 +91,28 @@ function PostsPage({ message, filter = "" }) {
         </Form>
 
         {hasLoaded ? (
-          <>
-            {posts.results.length ? (
-              <InfiniteScroll
-                children={posts.results.map((post) => 
-                  post.type === "video" ? (
-                  <VideoPost key={post.id} {...post} setPosts={setPosts} />  
-                  ) : (
-                  <Post key={post.id} {...post} setPosts={setPosts} />
-                ))}
-                dataLength={posts.results.length}
-                loader={<Asset spinner />}
-                hasMore={!!posts.next}
-                next={() => fetchMoreData(posts, setPosts)}
-//#             />
-        
-            //#code to allow created video posts to be displayed along with posts on Home?
-              >
-                {posts.results.map((post) =>
-                  post.type === "video" ? (
-                    <VideoPost key={post.id} {...post} setPosts={setPosts} />
-                  ) : (
-                    <Post key={post.id} {...post} setPosts={setPosts} />
-                  )
-                )}
-              </InfiniteScroll>
-
-            ) : (
-              <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
-              </Container>
-            )}
-          </>
-
+  <>
+    {posts.results.length ? (
+      <InfiniteScroll
+        dataLength={posts.results.length}
+        loader={<Asset spinner />}
+        hasMore={!!posts.next}
+        next={() => fetchMoreData(posts, setPosts)}
+      >
+        {posts.results.map((post) =>
+          post.type === "video" ? (
+            <VideoPost key={post.id} {...post} setPosts={setPosts} />
+          ) : (
+            <Post key={post.id} {...post} setPosts={setPosts} />
+          )
+        )}
+      </InfiniteScroll>
+    ) : (
+      <Container className={appStyles.Content}>
+        <Asset src={NoResults} message={message} />
+      </Container>
+    )}
+  </>
 
         ) : (
           <Container className={appStyles.Content}>
