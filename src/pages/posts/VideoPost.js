@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "../../styles/VideoPost.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import { Card, Media, OverlayTrigger, Tooltip, Container} from "react-bootstrap";
@@ -87,19 +87,19 @@ const handleLike = async () => {
     }
   };
 
-  useEffect(() => {
-    const fetchComments = async () => {
-      try {
-        const { data } = await axiosRes.get(`/comments/videoposts/${id}`);
-        console.log("Fetched comments:", data); // Log fetched comments
-        setComments(data.results);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+//  useEffect(() => {
+//    const fetchComments = async () => {
+//      try {
+//        const { data } = await axiosRes.get(`/comments/videoposts/${id}`);
+//        console.log("Fetched comments:", data); // Log fetched comments
+//        setComments(data.results);
+//      } catch (err) {
+//        console.log(err);
+//      }
+//    };
 
-    fetchComments();
-  }, [id]);
+//    fetchComments();
+//  }, [id]);
 
   return (
     <Card className={styles.Post}>
