@@ -15,6 +15,9 @@ import VideoPostCreateForm from "./pages/posts/VideoPostCreateForm";
 import VideoPostPage from "./pages/posts/VideoPostPage";
 import VideoPostCommentCreateForm from "./pages/comments/VideoPostCommentCreateForm";
 import VideoPostEditForm from "./pages/posts/VideoPostEditForm";
+import UsernameForm from "./pages/profiles/UsernameForm";
+import UserPasswordForm from "./pages/profiles/UserPasswordForm";
+import ProfileEditForm from "./pages/profiles/ProfileEditForm";
 
 
 
@@ -54,6 +57,9 @@ function App() {
           <Route exact path="/video-posts/:id/edit" render={() => <VideoPostEditForm />} />
           <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
+          <Route exact path="/profiles/:id/edit/username" render={() => <UsernameForm />} />
+          <Route exact path="/profiles/:id/edit/password" render={() => <UserPasswordForm />} />
+          <Route exact path="/profiles/:id/edit" render={() => <ProfileEditForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>
