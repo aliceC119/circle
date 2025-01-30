@@ -12,6 +12,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Asset from "../../components/Assets";
 import { fetchMoreData } from "../../utils/utils";
+import PopularProfiles from "../profiles/PopularProfiles";
 
 /* display video post in the leave a comment page. */
 const VideoPostPage = () => {
@@ -42,7 +43,7 @@ const VideoPostPage = () => {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
+      <PopularProfiles mobile />
 
         {post.results.length > 0 && (
           <VideoPost {...post.results[0]} setPosts={setPost} postPage />
@@ -84,7 +85,7 @@ const VideoPostPage = () => {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-        Popular profiles for desktop
+      <PopularProfiles />
       </Col>
     </Row>
   );
