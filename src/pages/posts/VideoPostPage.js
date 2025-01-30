@@ -43,45 +43,45 @@ const VideoPostPage = () => {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
-    
-      {post.results.length > 0 && (
-        <VideoPost {...post.results[0]} setPosts={setPost} postPage />
-      )}
 
-      <Container className={appStyles.Content}>
-        {currentUser ? (
-          <VideoPostCommentCreateForm
-            profile_id={currentUser.profile_id}
-            profileImage={profile_image}
-            videopost={id}
-            setVideoPost={setPost}
-            setComments={setComments}
-          />
-        ) : comments.results.length ? (
-          "Comments"
-        ) : null}
-        
-        {comments.results.length ? (
-          <InfiniteScroll
-            children={comments.results.map((comment) => (
-              <VideoPostComment
-                key={comment.id}
-                {...comment}
-                setPost={setPost}
-                setComments={setComments}
-              />
-            ))}
-            dataLength={comments.results.length}
-            loader={<Asset spinner />}
-            hasMore={!!comments.next}
-            next={() => fetchMoreData(comments, setComments)}
-          />
-        ) : currentUser ? (
-          <span>No comments yet, be the first to comment!</span>
-        ) : (
-          <span>No comments... yet</span>
+        {post.results.length > 0 && (
+          <VideoPost {...post.results[0]} setPosts={setPost} postPage />
         )}
-      </Container>
+
+        <Container className={appStyles.Content}>
+          {currentUser ? (
+            <VideoPostCommentCreateForm
+              profile_id={currentUser.profile_id}
+              profileImage={profile_image}
+              videopost={id}
+              setVideoPost={setPost}
+              setComments={setComments}
+            />
+          ) : comments.results.length ? (
+            "Comments"
+          ) : null}
+
+          {comments.results.length ? (
+            <InfiniteScroll
+              children={comments.results.map((comment) => (
+                <VideoPostComment
+                  key={comment.id}
+                  {...comment}
+                  setPost={setPost}
+                  setComments={setComments}
+                />
+              ))}
+              dataLength={comments.results.length}
+              loader={<Asset spinner />}
+              hasMore={!!comments.next}
+              next={() => fetchMoreData(comments, setComments)}
+            />
+          ) : currentUser ? (
+            <span>No comments yet, be the first to comment!</span>
+          ) : (
+            <span>No comments... yet</span>
+          )}
+        </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
         Popular profiles for desktop
