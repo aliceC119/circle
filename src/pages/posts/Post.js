@@ -77,6 +77,14 @@ const handleLike = async () => {
       console.log(err);
     }
   };
+  const copyLink = () => {
+    const link = `${window.location.origin}/posts/${id}`;
+    navigator.clipboard.writeText(link).then(() => {
+      alert("Link copied to clipboard!");
+    }, (err) => {
+      console.error("Could not copy text: ", err);
+    });
+  };
 
   return (
     <Card className={styles.Post}>
@@ -132,6 +140,16 @@ const handleLike = async () => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Copy link to clipboard</Tooltip>}
+          >
+            <i
+              className="fas fa-link"
+              style={{ marginLeft: '10px', cursor: 'pointer' }}
+              onClick={copyLink}
+            />
+          </OverlayTrigger>
         </div>
       </Card.Body>
     </Card>

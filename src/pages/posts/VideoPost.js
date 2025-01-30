@@ -101,6 +101,15 @@ const handleLike = async () => {
 //    fetchComments();
 //  }, [id]);
 
+const copyLink = () => {
+  const link = `${window.location.origin}/video-posts/${id}`;
+  navigator.clipboard.writeText(link).then(() => {
+    alert("Link copied to clipboard!");
+  }, (err) => {
+    console.error("Could not copy text: ", err);
+  });
+};
+
   return (
     <Card className={styles.Post}>
       <Card.Body>
@@ -165,6 +174,17 @@ const handleLike = async () => {
             <i className="far fa-comments" />
           </Link>
           {comments_count}
+          <OverlayTrigger
+            placement="top"
+            overlay={<Tooltip>Copy link to clipboard</Tooltip>}
+          >
+            <i
+              className="fas fa-link"
+              style={{ marginLeft: '10px', cursor: 'pointer' }}
+              onClick={copyLink}
+            />
+          </OverlayTrigger>
+
         </div>
         <Container>
           {comments.map((comment) => (
