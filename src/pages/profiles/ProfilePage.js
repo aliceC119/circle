@@ -65,6 +65,10 @@ function ProfilePage() {
             <div>posts</div>
           </Col>
           <Col xs={3} className="my-2">
+            <div>{profile?.video_posts_count}</div>
+            <div>video posts</div>
+          </Col>
+          <Col xs={3} className="my-2">
             <div>{profile?.followers_count}</div>
             <div>followers</div>
           </Col>
