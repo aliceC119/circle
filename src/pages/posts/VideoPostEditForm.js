@@ -23,11 +23,11 @@ function VideoPostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/video-posts/${id}/`);
-        const { title, description, videoId, is_owner } = data;
+        const { title, description, youtube_url, is_owner } = data;
 
         if (is_owner) {
-          const youtubeUrl = `https://www.youtube.com/embed/${videoId}`;
-          setPostData({ title, description, youtube_url: youtubeUrl });
+          
+          setPostData({ title, description, youtube_url });
         } else {
           history.push("/");
         }
