@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Form, Button, Row, Col, Container, Alert, } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { Form, Button, Row, Col, Container, Alert } from "react-bootstrap";
 import styles from "../../styles/PostCreateEditForm.module.css";
 import appStyles from "../../App.module.css";
 import btnStyles from "../../styles/Button.module.css";
@@ -11,12 +11,11 @@ function VideoPostEditForm() {
 
   const [postData, setPostData] = useState({
     title: "",
-    content: "",
-    video: ""
+    description: "",
+    youtube_url: ""
   });
-  const { title, content, video } = postData;
+  const { title, description, youtube_url } = postData;
 
-  const videoInput = useRef(null);
   const history = useHistory();
   const { id } = useParams();
 
@@ -24,9 +23,14 @@ function VideoPostEditForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/video-posts/${id}/`);
-        const { title, content, video, is_owner } = data;
+        const { title, description, videoId, is_owner } = data;
 
-        is_owner ? setPostData({ title, content, video }) : history.push("/");
+        if (is_owner) {
+          const youtubeUrl = `https://www.youtube.com/embed/${videoId}`;
+          setPostData({ title, description, youtube_url: youtubeUrl });
+        } else {
+          history.push("/");
+        }
       } catch (err) {
         console.log(err);
       }
@@ -42,34 +46,33 @@ function VideoPostEditForm() {
     });
   };
 
-  const handleChangeVideo = (event) => {
-    if (event.target.files.length) {
-      URL.revokeObjectURL(video);
-      setPostData({
-        ...postData,
-        video: URL.createObjectURL(event.target.files[0]),
-      });
-    }
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData();
-
-    formData.append("title", title);
-    formData.append("content", content);
-
-    if (videoInput?.current?.files[0]) {
-      formData.append("video", videoInput.current.files[0]);
-    }
 
     try {
-      await axiosReq.put(`/video-posts/${id}/`, formData);
+      const videoIdMatch = youtube_url.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+      if (!videoIdMatch) {
+        throw new Error("Invalid YouTube URL");
+      }
+      const videoId = videoIdMatch[1];
+      const payload = {
+        title,
+        description,
+        youtube_url: `https://www.youtube.com/embed/${videoId}`
+      };
+
+      await axiosReq.put(`/video-posts/${id}/`, payload, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
       history.push(`/video-posts/${id}`);
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
+      } else {
+        setErrors({ youtube_url: ["Invalid YouTube URL."] });
       }
     }
   };
@@ -92,16 +95,31 @@ function VideoPostEditForm() {
       ))}
 
       <Form.Group>
-        <Form.Label>Content</Form.Label>
+        <Form.Label>Description</Form.Label>
         <Form.Control
           as="textarea"
           rows={6}
-          name="content"
-          value={content}
+          name="description"
+          value={description}
           onChange={handleChange}
         />
       </Form.Group>
-      {errors?.content?.map((message, idx) => (
+      {errors?.description?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
+
+      <Form.Group>
+        <Form.Label>YouTube URL</Form.Label>
+        <Form.Control
+          type="text"
+          name="youtube_url"
+          value={youtube_url}
+          onChange={handleChange}
+        />
+      </Form.Group>
+      {errors?.youtube_url?.map((message, idx) => (
         <Alert variant="warning" key={idx}>
           {message}
         </Alert>
@@ -127,26 +145,16 @@ function VideoPostEditForm() {
             className={`${appStyles.Content} ${styles.Container} d-flex flex-column justify-content-center`}
           >
             <Form.Group className="text-center">
-              <figure>
-                <video className={appStyles.Video} src={video} controls /> {/* Adjust video styling */}
-              </figure>
-              <div>
-                <Form.Label
-                  className={`${btnStyles.Button} ${btnStyles.Blue} btn`}
-                  htmlFor="video-upload"
-                >
-                  Change the video
-                </Form.Label>
-              </div>
-
-              <Form.File
-                id="video-upload"
-                accept="video/*"
-                onChange={handleChangeVideo}
-                ref={videoInput}
+              <iframe
+                className={appStyles.Video}
+                src={youtube_url}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
               />
             </Form.Group>
-            {errors?.video?.map((message, idx) => (
+            {errors?.youtube_url?.map((message, idx) => (
               <Alert variant="warning" key={idx}>
                 {message}
               </Alert>
