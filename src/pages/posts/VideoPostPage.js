@@ -14,10 +14,9 @@ import Asset from "../../components/Assets";
 import { fetchMoreData } from "../../utils/utils";
 import PopularProfiles from "../profiles/PopularProfiles";
 
-/* display video post in the leave a comment page. */
 const VideoPostPage = () => {
   const { id } = useParams();
-  const [post, setPost] = useState({ results: [] });
+  const [post, setVideoPost] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -28,9 +27,9 @@ const VideoPostPage = () => {
       try {
         const [{ data: post }, { data: comments }] = await Promise.all([
           axiosReq.get(`/video-posts/${id}`),
-          axiosReq.get(`/comments/videoposts?post=${id}`),
+          axiosReq.get(`/comments/videoposts/?video_post=${id}`),
         ]);
-        setPost({ results: [post] });
+        setVideoPost({ results: [post] });
         setComments(comments);
       } catch (err) {
         console.error(err);
@@ -43,10 +42,10 @@ const VideoPostPage = () => {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-      <PopularProfiles mobile />
+        <PopularProfiles mobile />
 
         {post.results.length > 0 && (
-          <VideoPost {...post.results[0]} setPosts={setPost} postPage />
+          <VideoPost {...post.results[0]} setVideoPost={setVideoPost} postPage />
         )}
 
         <Container className={appStyles.Content}>
@@ -55,7 +54,7 @@ const VideoPostPage = () => {
               profile_id={currentUser.profile_id}
               profileImage={profile_image}
               videopost={id}
-              setVideoPost={setPost}
+              setVideoPost={setVideoPost}
               setComments={setComments}
             />
           ) : comments.results.length ? (
@@ -68,7 +67,7 @@ const VideoPostPage = () => {
                 <VideoPostComment
                   key={comment.id}
                   {...comment}
-                  setPost={setPost}
+                  setVideoPost={setVideoPost}
                   setComments={setComments}
                 />
               ))}
@@ -85,7 +84,7 @@ const VideoPostPage = () => {
         </Container>
       </Col>
       <Col lg={4} className="d-none d-lg-block p-0 p-lg-2">
-      <PopularProfiles />
+        <PopularProfiles />
       </Col>
     </Row>
   );

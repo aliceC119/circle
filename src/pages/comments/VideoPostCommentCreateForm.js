@@ -18,8 +18,9 @@ function VideoPostCommentCreateForm(props) {
         event.preventDefault();
         try {
             const { data } = await axiosRes.post("/comments/videoposts/", {
-                content,
-                videopost,
+                owner:profile_id,
+                content: content,
+                video_post: videopost,
             });
             setComments((prevComments) => ({
                 ...prevComments,
