@@ -171,6 +171,19 @@ The app can be found by clicking the 'Open App' button in the top right corner w
 
 ## Credits
 
++ The setup and overall design of this project are based on the "Moments" walkthrough project from the Code Institute. The main components—including profiles, posts, likes, comments, and followers—were derived from the walkthrough project. Additionally, new elements such as video posts and copy links have been added to enhance this project.
+### Pictures
+The photos in the project are mainly sourced from [Pexels](https://www.pexels.com/) and my own personal collection.
+### Videos
+
+The videos in the project are sourced from [Youtube](https://www.youtube.com/)
+### Website for references
+
++ The following websites were used as a source of knowledge:
+  + [GeeksforGeeks](https://www.geeksforgeeks.org/)
+  + [reddit](https://www.reddit.com/)
+  + [stack Overflow](https://stackoverflow.com/)
+  + [Google](https://www.google.de/)
 
 
 
