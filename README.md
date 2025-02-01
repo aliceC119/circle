@@ -81,7 +81,42 @@ List od Epics:
 
 ### Design 
 
-+ Wireframes
+   ## Wireframes
+   
+   Sign up page
+   
+   <img width="820" alt="Screenshot 2025-02-01 at 21 45 18" src="https://github.com/user-attachments/assets/b6b5dbfd-533b-4e39-ae2a-d58734818697" />
+   
+   Sign in Page
+   
+   <img width="822" alt="Screenshot 2025-02-01 at 21 44 12" src="https://github.com/user-attachments/assets/790c0470-f243-42fb-96f3-099543d21c84" />
+   
+   Home page, Feed page & Liked page 
+   
+   <img width="820" alt="Screenshot 2025-02-01 at 21 21 38" src="https://github.com/user-attachments/assets/d9dc7145-49ef-4b71-b56b-4ab2a56742ef" />
+   
+   Posts create page
+   
+   <img width="821" alt="Screenshot 2025-02-01 at 21 55 08" src="https://github.com/user-attachments/assets/47ed9ae8-a59d-49d5-8dfb-a0e34d852eff" />
+   
+   Video posts create page
+   
+   <img width="820" alt="Screenshot 2025-02-01 at 21 53 47" src="https://github.com/user-attachments/assets/46f23cff-1b7c-43c3-aeea-065723ff0dcf" />
+   
+   Posts edit page
+   
+   <img width="823" alt="Screenshot 2025-02-01 at 21 58 03" src="https://github.com/user-attachments/assets/965cc094-12b5-459a-835c-78e02020db6d" />
+   
+   Video posts edit page
+   
+   <img width="819" alt="Screenshot 2025-02-01 at 22 00 12" src="https://github.com/user-attachments/assets/b6fecea6-fe91-4765-a12d-14ee27f523be" />
+
+
+
+
+
+
+
 
 ### Structure
 
