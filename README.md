@@ -1,5 +1,8 @@
 # Circle
 
+<img width="985" alt="Screenshot 2025-02-01 at 13 58 47" src="https://github.com/user-attachments/assets/8d553e2b-48f6-4671-9cb8-e6c9e1d370fc" />
+
+
 ## Advanced Front-End Portfolio Project (PP5)
 
 The aim of the project is to create an interactive online platform where people can connect and share their thoughts about their lives. Users will be able to post pictures of their ideas and share YouTube videos of their wishes. In addition, users can easily copy and share links to these posts and videos on other online platforms.
