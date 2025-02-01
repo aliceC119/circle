@@ -32,7 +32,7 @@ function VideoPostEditForm() {
           history.push("/");
         }
       } catch (err) {
-        console.log(err);
+       
       }
     };
 
@@ -68,7 +68,7 @@ function VideoPostEditForm() {
       });
       history.push(`/video-posts/${id}`);
     } catch (err) {
-      console.log(err);
+    
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       } else {

@@ -42,7 +42,7 @@ const VideoPost = (props) => {
       await axiosRes.delete(`/video-posts/${id}/`);
       history.goBack();
     } catch (err) {
-      console.log(err);
+    
     }
   };
 /* handleLike for video post */
@@ -59,13 +59,9 @@ const handleLike = async () => {
       }));
     } catch (err) {
       if(err.response) {
-        console.log('Response data:', err.response.data);
-        console.log('Response status:', err.response.status);
-        console.log('Response headers:', err.response.headers);
-      } else if(err.request) {
-        console.log('Request data:', err.request);
-      } else {
-        console.log('Error message:', err.message);
+      
+      } else if(err.request) {      
+      } else {     
       }
     }
 
@@ -85,23 +81,10 @@ const handleLike = async () => {
         }),
       }));
     } catch (err) {
-      console.log(err);
+      
     }
   };
 
-//  useEffect(() => {
-//    const fetchComments = async () => {
-//      try {
-//        const { data } = await axiosRes.get(`/comments/videoposts/${id}`);
-//        console.log("Fetched comments:", data); // Log fetched comments
-//        setComments(data.results);
-//      } catch (err) {
-//        console.log(err);
-//      }
-//    };
-
-//    fetchComments();
-//  }, [id]);
 
 const copyLink = () => {
   const link = `${window.location.origin}/video-posts/${id}`;

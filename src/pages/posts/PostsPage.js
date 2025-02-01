@@ -33,10 +33,6 @@ function PostsPage({ message, filter = "" }) {
         const postsResponse = await axiosReq.get(`/posts/?${filter}search=${query}`);
         const videoPostsResponse = await axiosReq.get(`/video-posts/?${filter}search=${query}`);
         
-        // Log the entire responses to examine their structure
-        console.log("Full posts response:", postsResponse);
-        console.log("Full video posts response:", videoPostsResponse);
-  
         // Check if the 'results' property exists
         if (!(postsResponse.data.hasOwnProperty('results') && videoPostsResponse.data.hasOwnProperty('results'))) {
           throw new Error("API response does not contain the expected 'results' property.");

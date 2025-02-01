@@ -47,7 +47,7 @@ function ProfilePage() {
         setProfileVideoPosts(videos);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+      
       }
     };
     fetchData();

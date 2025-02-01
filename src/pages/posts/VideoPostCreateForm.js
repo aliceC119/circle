@@ -63,7 +63,7 @@ function VideoPostCreateForm() {
       //const { data } = await axiosReq.post("/video-posts/", formData);
       history.push(`/video-posts/${data.id}`);
     } catch (err) {
-      console.log(err);
+     
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       } else {

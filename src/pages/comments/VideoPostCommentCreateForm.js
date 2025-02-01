@@ -36,7 +36,6 @@ function VideoPostCommentCreateForm(props) {
             }));
             setContent("");
         } catch (err) {
-            console.log(err);
         }
     };
 
