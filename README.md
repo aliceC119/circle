@@ -112,11 +112,6 @@ List od Epics:
 
 
 
-
-
-
-
-
 ### Structure
 
 All information about the structure can be found in the README of the API [here](https://github.com/aliceC119/drf-api-circle)
@@ -154,6 +149,11 @@ These are features that I would like to add to this project in the future.
 + [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
 
 ## Testing 
++ Due to time constraints, only a limited number of tests could be performed.
++ Manual tests were conducted frequently.
+
+### Validator Testing
+
 + CSS Validation
 <img width="1388" alt="Screenshot 2025-02-01 at 14 17 26" src="https://github.com/user-attachments/assets/2ccce270-05d8-4aa4-9ae3-c7a2435854a0" />
 
@@ -161,7 +161,6 @@ These are features that I would like to add to this project in the future.
 + Lighthouse test
 <img width="785" alt="Screenshot 2025-02-01 at 14 12 28" src="https://github.com/user-attachments/assets/1ca0e3fe-8cbe-4f2f-9367-fa5782d81d0e" />
 
-### Validator Testing
 
 ## Deployment
 
