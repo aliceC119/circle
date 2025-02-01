@@ -26,7 +26,7 @@ The Circle frontend, built with React, is the user interface of the drf-api-circ
 + [Testing](https://github.com/aliceC119/circle?tab=readme-ov-file#testing)
 + [Deployment](https://github.com/aliceC119/circle?tab=readme-ov-file#deployment)
 + [Credits](https://github.com/aliceC119/circle?tab=readme-ov-file#credits)
-+ [Acknowledgements](https://github.com/aliceC119/circle/edit/main/README.md#acknowledgements)
++ [Acknowledgements](https://github.com/aliceC119/circle?tab=readme-ov-file#acknowledgements)
 
 ### User experience 
 
