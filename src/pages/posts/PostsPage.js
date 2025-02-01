@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 
 import Post from "./Post";
 import VideoPost from "./VideoPost";
-import Asset from "../../components/Assets";
+import Asset from "../../components/Asset";
 
 import appStyles from "../../App.module.css";
 import styles from "../../styles/PostsPage.module.css";

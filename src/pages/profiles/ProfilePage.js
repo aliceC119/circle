@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row, Container, Button, Image } from "react-bootstrap";
 import { useParams } from "react-router";
-import Asset from "../../components/Assets";
+import Asset from "../../components/Asset";
 import Post from "../posts/Post";
 import VideoPost from "../posts/VideoPost";
 import InfiniteScroll from "react-infinite-scroll-component";

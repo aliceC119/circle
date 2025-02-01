@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Alert from "react-bootstrap/Alert";
 import Image from "react-bootstrap/Image";
 
-import Asset from "../../components/Assets";
+import Asset from "../../components/Asset";
 
 import Upload from "../../assets/upload.png";
 
