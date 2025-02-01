@@ -62,8 +62,10 @@ const handleLike = async () => {
 
   
   const handleUnlike = async () => {
+    
+      console.log("like_id:", like_id); // Log the like_id for debugging
     try {
-      await axiosRes.delete(`/likes/${like_id}/`);
+      await axiosRes.delete(`/likes/posts/${like_id}/`);
       setPosts((prevPosts) => ({
         ...prevPosts,
         results: prevPosts.results.map((post) => {
