@@ -80,8 +80,7 @@ List od Epics:
 | [#27](https://github.com/aliceC119/circle/issues/27) | As a user I can click on the copy link button so that copy the post/ video post by getting the URL links| Done |
 
 ### Design 
-
-   ## Wireframes
+   - Wireframes
    
    Sign up page
    
