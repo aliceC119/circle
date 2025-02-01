@@ -210,7 +210,7 @@ The photos in the project are mainly sourced from [Pexels](https://www.pexels.co
 ### Videos
 
 The videos in the project are sourced from [Youtube](https://www.youtube.com/)
-### Website for references
+### Code references
 
 + The following websites were used as a source of knowledge:
   + [GeeksforGeeks](https://www.geeksforgeeks.org/)
