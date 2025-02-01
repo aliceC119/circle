@@ -67,8 +67,6 @@ const handleLike = async () => {
 
 };
 
-  
-
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/videoposts/${like_id}/`);
