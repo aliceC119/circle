@@ -22,6 +22,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function PostsPage({ message, filter = "" }) {
   const [posts, setPosts] = useState({ results: [] });
+  const [setVideoPost] = useState({ results: [] });
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
 
@@ -87,7 +88,7 @@ function PostsPage({ message, filter = "" }) {
       >
         {posts.results.map((post) =>
           post.type === "video" ? (
-            <VideoPost key={post.id} {...post} setPosts={setPosts} />
+            <VideoPost key={post.id} {...post} setVideoPosts={setVideoPost} />
           ) : (
             <Post key={post.id} {...post} setPosts={setPosts} />
           )
