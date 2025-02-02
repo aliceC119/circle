@@ -140,7 +140,7 @@ All information about the structure can be found in the README of the API [here]
    - **Followers/Following**: Users can follow other users by clicking the follow button.
    - **Unfollow/Unfollowing**: Users can unfollow other users by clicking the unfollow button.
      
-These are features that I would like to add to this project in the future.
+### Possible Feature for Future Implementation
 + Share a Post / Video Post: Allow users to share the post/video without following the owner of the post/video.
 + Create groups: Help group users with similar interests and increase their engagement and connection within Circle.
 + Chat function: Allows users to communicate with specific users in a private environment to build a deeper connection.
