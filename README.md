@@ -119,6 +119,27 @@ List od Epics:
 All information about the structure can be found in the README of the API [here](https://github.com/aliceC119/drf-api-circle)
 
 ### Feature
+
++ These are the features available in this project:
+   - **SignUp**: New users can register to use this app.
+   - **SignIn**: Registered users can log in to access the app.
+   - **Add a Post**: Users can upload a photo of their choice and publish a post.
+   - **Edit a Post**: Users can edit their own existing post.
+   - **Delete a Post**: Users can delete their own existing post.
+   - **Add a Video Post**: Users can create a video post by pasting a YouTube URL.
+   - **Edit a Video Post**: Users can edit their own existing video post by updating the YouTube URL, title, and description.
+   - **Delete a Video Post**: Users can delete their own existing video post.
+   - **Like a Post**: Users can like a post by clicking the heart icon, the like count will be updated accordingly.
+   - **Unlike a Post**: Users can unlike a post by clicking the heart icon again. The like count will be updated accordingly.
+   - **Like a Video Post**: Users can like a post by clicking the heart icon, the like count will be updated accordingly.
+   - **Unlike a Video Post**: Users can unlike a post by clicking the heart icon again. The like count will be updated accordingly.
+   - **Comment on a Post**: Users can comment on a post, and the comment count will be updated accordingly.
+   - **Delete a Comment on a Post**: Users can delete a comment, and the comment count will be updated accordingly.
+   - **Copy Link**: Users can copy the link of a post or video post by clicking the chain icon. They can then paste the link anywhere they would like to share the post or video post.
+   - **Profile**: Users can update their personal information in their profile, such as bio, profile picture, their username and password. They can also view the number of posts and video posts they have published in the app, and the number of followers they are folllowing in the App.
+   - **Followers/Following**: Users can follow other users by clicking the follow button.
+   - **Unfollow/Unfollowing**: Users can unfollow other users by clicking the unfollow button.
+     
 These are features that I would like to add to this project in the future.
 + Share a Post / Video Post: Allow users to share the post/video without following the owner of the post/video.
 + Create groups: Help group users with similar interests and increase their engagement and connection within Circle.
@@ -225,6 +246,8 @@ The videos in the project are sourced from [Youtube](https://www.youtube.com/)
 
 ### Acknowledgements
 
+ + Many thanks to the tutor support team for helping me with this project, especially Rebecca, Sarah, Oisín, and Roman. Their assistance was invaluable; they supported me every time I got stuck and always tried their best to help me resolve issues. Thank you to my mentor, Gareth, for showing his support.
++ This project is for educational use.
 
 
 
