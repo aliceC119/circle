@@ -117,6 +117,9 @@ List od Epics:
    
    <img width="819" alt="Screenshot 2025-02-01 at 22 00 12" src="https://github.com/user-attachments/assets/b6fecea6-fe91-4765-a12d-14ee27f523be" />
 
+   Posts / Video Posts comment page
+
+   <img width="820" alt="Screenshot 2025-02-02 at 16 37 32" src="https://github.com/user-attachments/assets/b773a84f-8d57-4bfd-a4c7-1cd797b0b2c2" />
 
 
 ### Structure
