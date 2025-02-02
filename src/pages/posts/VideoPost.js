@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../styles/VideoPost.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media, OverlayTrigger, Tooltip, Container} from "react-bootstrap";
+import { Card, Media, OverlayTrigger, Tooltip, Container } from "react-bootstrap";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -24,7 +24,7 @@ const VideoPost = (props) => {
     youtube_url,
     updated_at,
     postPage,
-    setVideoPosts,
+    setVideoPost,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -49,9 +49,9 @@ const VideoPost = (props) => {
 const handleLike = async () => {
     try {
       const { data } = await axiosRes.post("/likes/videoposts/", { video_post: id });
-      setVideoPosts((prevVideoPosts) => ({
-        ...prevVideoPosts,
-        results: prevVideoPosts.results.map((post) => {
+      setVideoPost((prevVideoPost) => ({
+        ...prevVideoPost,
+        results: prevVideoPost.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count + 1, like_id: data.id }
             : post;
@@ -70,15 +70,16 @@ const handleLike = async () => {
   const handleUnlike = async () => {
     try {
       await axiosRes.delete(`/likes/videoposts/${like_id}/`);
-      setVideoPosts((prevVideoPosts) => ({
-        ...prevVideoPosts,
-        results: prevVideoPosts.results.map((post) => {
+      setVideoPost((prevVideoPost) => ({
+        ...prevVideoPost,
+        results: prevVideoPost.results.map((post) => {
           return post.id === id
             ? { ...post, likes_count: post.likes_count - 1, like_id: null }
             : post;
         }),
       }));
     } catch (err) {
+      console.error("Error unliking video post:", err);
       
     }
   };
@@ -171,7 +172,7 @@ const copyLink = () => {
         </div>
         <Container>
           {comments.map((comment) => (
-            <VideoPostComment key={comment.id} {...comment} setComments={setComments} setVideoPost={setVideoPosts} />
+            <VideoPostComment key={comment.id} {...comment} setComments={setComments} setVideoPost={setVideoPost} />
           ))}
         </Container>
         
