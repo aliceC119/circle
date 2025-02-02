@@ -10,6 +10,10 @@ The aim of the project is to create an interactive online platform where people 
 
 The Circle frontend, built with React, is the user interface of the drf-api-circle application. It offers a vibrant and intuitive experience for users interacting with the social network. Seamlessly integrating with the [drf-api-circle](https://github.com/aliceC119/drf-api-circle), it enhances the overall user experience by providing a responsive and dynamic interface.
 
++ The deployed API is available [here](https://drf-api-circle-320cd30d1665.herokuapp.com/)
++ The deployed React project is accessible [Circle](https://circle-ppt5-a39096a720ce.herokuapp.com/)
++ The GitHub repository for the associated backend can be found [drf-api-cirle](https://github.com/aliceC119/drf-api-circle)
+
 -----
 ## Table of contents
 + [User Experience](https://github.com/aliceC119/circle/blob/main/README.md#user-experience)
@@ -224,6 +228,8 @@ Choose `main` as the branch to deploy and click on 'Deploy Branch'. You can do t
 The app can be found by clicking the 'Open App' button in the top right corner with the Heroku URL configuration as follows: https://*.herokuapp.com
 
 <img width="1481" alt="Screenshot 2025-01-26 at 15 08 10" src="https://github.com/user-attachments/assets/0edc5938-3840-4b76-ad99-601ebad24482" />
+
+The deployed React project is accessible [here](https://circle-ppt5-a39096a720ce.herokuapp.com/)
 
 -------
 
