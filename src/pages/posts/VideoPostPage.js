@@ -16,7 +16,7 @@ import PopularProfiles from "../profiles/PopularProfiles";
 
 const VideoPostPage = () => {
   const { id } = useParams();
-  const [post, setVideoPost] = useState({ results: [] });
+  const [videopost, setVideoPost] = useState({ results: [] });
 
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -44,8 +44,8 @@ const VideoPostPage = () => {
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <PopularProfiles mobile />
 
-        {post.results.length > 0 && (
-          <VideoPost {...post.results[0]} setVideoPost={setVideoPost} postPage />
+        {videopost.results.length > 0 && (
+          <VideoPost {...videopost.results[0]} setVideoPost={setVideoPost} postPage />
         )}
 
         <Container className={appStyles.Content}>

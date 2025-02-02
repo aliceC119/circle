@@ -31,6 +31,10 @@ const VideoPost = (props) => {
   const is_owner = currentUser?.username === owner;
   const history = useHistory();
   const [comments, setComments] = useState([]);
+
+  if (typeof setVideoPost !== 'function') {
+    console.error('setVideoPost is not a function');
+  }
   
 
   const handleEdit = () => {
@@ -58,6 +62,7 @@ const handleLike = async () => {
         }),
       }));
     } catch (err) {
+      console.error("Error liking video post:", err.response ? err.response.data : err.message);
       if(err.response) {
       
       } else if(err.request) {      
@@ -142,7 +147,7 @@ const copyLink = () => {
               <i className={`fas fa-heart ${styles.Heart}`} />
             </span>
           ) : currentUser ? (
-            <span onClick={() => handleLike(true)}>{/* true for video posts */ }
+            <span onClick={handleLike}>
               <i className={`far fa-heart ${styles.HeartOutline}`} />
             </span>
           ) : (
