@@ -160,8 +160,10 @@ These are features that I would like to add to this project in the future.
 <img width="1388" alt="Screenshot 2025-02-01 at 14 17 26" src="https://github.com/user-attachments/assets/2ccce270-05d8-4aa4-9ae3-c7a2435854a0" />
 
 + JavaScript Validation
++ [ESLint](https://eslint.org/) ESLint has been used to validate the code for this project. It was installed early in the development process and is stored in `package.json`. There are no warnings or errors displayed in the terminal.
 + Lighthouse test
-<img width="785" alt="Screenshot 2025-02-01 at 14 12 28" src="https://github.com/user-attachments/assets/1ca0e3fe-8cbe-4f2f-9367-fa5782d81d0e" />
+<img width="933" alt="Screenshot 2025-02-02 at 15 29 09" src="https://github.com/user-attachments/assets/d8a8bb3f-f2f2-48b2-b1a1-1063f429b125" />
+
 
 
 ## Deployment
