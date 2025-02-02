@@ -84,6 +84,7 @@ List od Epics:
 | [#25](https://github.com/aliceC119/circle/issues/25) | As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed| Done |
 | [#26](https://github.com/aliceC119/circle/issues/26) | As a logged in user I can I can edit my profile so that I can change my profile picture and bio| Done |
 | [#27](https://github.com/aliceC119/circle/issues/27) | As a user I can click on the copy link button so that copy the post/ video post by getting the URL links| Done |
+| [#28](https://github.com/aliceC119/circle/issues/28) | As a user I can view both posts and video posts on Home, Feed, Liked and Profile page so that I can stay updated on the activities of other users| Done |
 
 ### Design 
    - Wireframes
