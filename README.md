@@ -1,6 +1,7 @@
 # Circle
 
-<img width="985" alt="Screenshot 2025-02-01 at 13 58 47" src="https://github.com/user-attachments/assets/8d553e2b-48f6-4671-9cb8-e6c9e1d370fc" />
+<img width="964" alt="Screenshot 2025-02-02 at 10 25 28" src="https://github.com/user-attachments/assets/3bf8ad7d-b86c-4e54-8922-f625ea4b4e01" />
+
 
 
 ## Advanced Front-End Portfolio Project (PP5)
