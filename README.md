@@ -279,6 +279,7 @@ All information about the structure can be found in the README of the API [here]
 + [Cloudinary](https://cloudinary.com/)
 + [Canva](https://www.canva.com/)
 + [Favison.io](https://favicon.io/)
++ [Coolors](https://coolors.co/)
 
 ### Frameworks:
 + [React](https://react.dev/)
@@ -354,6 +355,7 @@ The photos in the project are mainly sourced from [Pexels](https://www.pexels.co
 ### Videos
 
 The videos in the project are sourced from [Youtube](https://www.youtube.com/)
+
 ### Code references
 
 + The following websites were used as a source of knowledge:
