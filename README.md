@@ -89,37 +89,127 @@ List od Epics:
 ### Design 
    - Wireframes
    
-   Sign up page
+   **Sign up page**
+   
+   Desktop
    
    <img width="820" alt="Screenshot 2025-02-01 at 21 45 18" src="https://github.com/user-attachments/assets/b6b5dbfd-533b-4e39-ae2a-d58734818697" />
    
-   Sign in Page
+   Tablet
+   
+   <img width="612" alt="sign-up" src="https://github.com/user-attachments/assets/5fb101ed-922b-4961-b036-5c803407e7be" />
+   
+   Mobile
+   
+   <img width="432" alt="signup" src="https://github.com/user-attachments/assets/820243e8-94e5-4e07-8d13-048a9e2b5e48" />
+
+
+   
+   **Sign in Page**
+
+   Destop
    
    <img width="822" alt="Screenshot 2025-02-01 at 21 44 12" src="https://github.com/user-attachments/assets/790c0470-f243-42fb-96f3-099543d21c84" />
+
+   Tablet
+
+   <img width="612" alt="sign-in" src="https://github.com/user-attachments/assets/de776451-855f-4d0f-aa72-2d5f5d5905c8" />
+
+   Mobile
+
+   <img width="435" alt="signin" src="https://github.com/user-attachments/assets/2f82377b-006b-4ece-98d5-3ea60db1ea78" />
    
-   Home page, Feed page & Liked page 
+
+   **Home page, Feed page & Liked page** 
+
+   Desktop
    
-   <img width="820" alt="Screenshot 2025-02-01 at 21 21 38" src="https://github.com/user-attachments/assets/d9dc7145-49ef-4b71-b56b-4ab2a56742ef" />
+   <img width="820" alt="Screenshot 2025-02-01 at 21 21 38" src="https://github.com/user-attachments/assets/d9dc7145-49ef-4b71-b56b-4ab2a56742ef" /> 
+
+   Tablet
+
+   <img width="612" alt="home_" src="https://github.com/user-attachments/assets/5da2eb0c-0cc8-408e-835a-c47428bc9fca" /> 
+
+   Mobile
+
+   <img width="436" alt="home" src="https://github.com/user-attachments/assets/4cf0a1ab-7a4c-41d4-a477-aedf24126d30" />
+
    
-   Posts create page
+   **Posts create page**
+
+   Desktop
    
    <img width="821" alt="Screenshot 2025-02-01 at 21 55 08" src="https://github.com/user-attachments/assets/47ed9ae8-a59d-49d5-8dfb-a0e34d852eff" />
+
+   Tablet
+
+   <img width="614" alt="postscreate" src="https://github.com/user-attachments/assets/ef71ab7d-37f4-4c17-a302-14795c15f24f" />
+
+   Mobile
+
+   <img width="436" alt="posts-create" src="https://github.com/user-attachments/assets/33555cd1-8c79-48bb-9a8e-0efb1609564d" />
+
    
-   Video posts create page
+   **Video posts create page**
+
+   Desktop
    
-   <img width="820" alt="Screenshot 2025-02-01 at 21 53 47" src="https://github.com/user-attachments/assets/46f23cff-1b7c-43c3-aeea-065723ff0dcf" />
-   
-   Posts edit page
+   <img width="820" alt="Screenshot 2025-02-01 at 21 53 47" src="https://github.com/user-attachments/assets/46f23cff-1b7c-43c3-aeea-065723ff0dcf" /> 
+
+   Tablet
+
+   <img width="612" alt="videopostcreate" src="https://github.com/user-attachments/assets/b0955edf-0c58-4795-8f68-4da0e6eeb2b8" />
+
+   Mobile
+
+   <img width="439" alt="video-post-create" src="https://github.com/user-attachments/assets/fc4cc3ca-3300-473f-b99c-af05ea144d24" />
+
+   **Posts edit page**
+
+   Desktop
    
    <img width="823" alt="Screenshot 2025-02-01 at 21 58 03" src="https://github.com/user-attachments/assets/965cc094-12b5-459a-835c-78e02020db6d" />
+
+   Tablet
+
+   <img width="613" alt="postsedit" src="https://github.com/user-attachments/assets/50e0e2ea-b554-4df8-be9f-2e6407d3d2aa" />
+
+   Mobile
+
+   <img width="440" alt="posts-edit" src="https://github.com/user-attachments/assets/e41ea2ea-a602-4acb-850f-380a1351f6a9" />
+
    
-   Video posts edit page
+   **Video posts edit page**
+
+   Desktop
    
    <img width="819" alt="Screenshot 2025-02-01 at 22 00 12" src="https://github.com/user-attachments/assets/b6fecea6-fe91-4765-a12d-14ee27f523be" />
 
-   Posts / Video Posts comment page
+   Tablet
+
+   <img width="612" alt="videopostsedit" src="https://github.com/user-attachments/assets/6c36a9c4-9704-4021-ae07-9014b6942aef" />
+
+   Mobile
+
+   <img width="437" alt="video-posts-edit" src="https://github.com/user-attachments/assets/8c956680-3943-4aeb-bffb-18814b4d3165" />
+
+
+
+   **Posts / Video Posts comment page**
+
+   Desktop
 
    <img width="820" alt="Screenshot 2025-02-02 at 16 37 32" src="https://github.com/user-attachments/assets/b773a84f-8d57-4bfd-a4c7-1cd797b0b2c2" />
+
+   Tablet
+
+   <img width="613" alt="comment" src="https://github.com/user-attachments/assets/d45372cf-2c29-4d46-96a1-e1519169697e" />
+
+   Mobile 
+
+   <img width="439" alt="comment_" src="https://github.com/user-attachments/assets/374973e0-2738-43e5-b25a-d4fbcb0b54e0" />
+
+
 
 
 ### Structure
