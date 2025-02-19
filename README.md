@@ -86,8 +86,19 @@ List od Epics:
 | [#27](https://github.com/aliceC119/circle/issues/27) | As a user I can click on the copy link button so that copy the post/ video post by getting the URL links| Done |
 | [#28](https://github.com/aliceC119/circle/issues/28) | As a user I can view both posts and video posts on Home, Feed, Liked and Profile page so that I can stay updated on the activities of other users| Done |
 
-### Design 
-   - Wireframes
+## Design 
+
+
+
+ ### Colour scheme
+
+<img width="2062" alt="color scheme" src="https://github.com/user-attachments/assets/a12f4be4-ec09-471e-8d96-4183ed2af3de" />
+
+
+The color palette was thoughtfully selected to create a warm and welcoming atmosphere for our users. A variety of colors were used such as plum, rosy, orange, and purple, balanced against shades of white, light grey, and blue. This combination not only enhances visual appeal but also draws users' attention, encouraging them to engage more with the site.
+
+
+### Wireframes
    
    **Sign up page**
    
