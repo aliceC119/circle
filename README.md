@@ -97,6 +97,12 @@ List od Epics:
 
 The color palette was thoughtfully selected to create a warm and welcoming atmosphere for our users. A variety of colors were used such as plum, rosy, orange, and purple, balanced against shades of white, light grey, and blue. This combination not only enhances visual appeal but also draws users' attention, encouraging them to engage more with the site.
 
+### Typography
+
+The typography chosen for Circle includes the following font families: Menlo, Monaco, Consolas, 'Courier New', monospace, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', and 'Helvetica Neue'. These fonts offer a warm yet professional tone, creating an engaging user experience that feels friendly, clean, and polished.
+
+
+
 
 ### Wireframes
    
