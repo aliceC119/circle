@@ -231,9 +231,49 @@ The typography chosen for Circle includes the following font families: Menlo, Mo
 
 
 
-### Structure
+## Structure
 
 All information about the structure can be found in the README of the API [here](https://github.com/aliceC119/drf-api-circle)
+
+### Component and Reusability
+
+Circle is a social web application that provides a platform for users to share their life moments and engage users with similar interests for more interactions. The application's structure comprises multiple reusable components, ensuring a consistent user experience.
+
+### Core Components
+
++ **Asset**: This component manages the display of a spinner or an image, accompanied by an optional message. It is utilized across various parts of the application, including NotFound, PostCreateForm, PostPage, and PostsPage, VideoPostPage, PopularProfiles, ProfilePage, to provide visual feedback during data loading or to showcase specific images for information.
++ **Avatar**: This component displays user profile images and is reused in the NavBar, Post, VideoPost, Comments, CommentCreateForm, VideoPostComment, VideoPostCommentCreateForm and Profile, ensuring consistency and personalization across the application.
++ **MoreDropdown**: A dropdown menu component that were applied in the Comment, VideoPostComment, Post and VideoPost for various context-based actions.
++ **NavBar**: A navigation bar component that is displayed on all pages. This ensures seamless navigation throughout the application.
++ **NotFound**: A component displayed when a requested resource is unavailable or a result does not exist.
+
+### Component Pages
+
+Authentication:
++ **SigninForm & SignupForm**: Components that handle user authentication processes.
+
+Comments:
++ **Comment**: Displays user comments for posts.
++ **CommentCreateForm & CommentEditForm**: Forms used to create and edit comments for posts.
++ **VideoPostComment**: Display user comment for video posts.
++ **VideoPostCreateForm & VideoPostCommentEditForm**: Forms used to create and edit comments for video posts.
+
+Posts:
++ **Post**: Component to display posts.
++ **PostCreateForm & PostEditForm**: Forms used to create and edit posts.
++ **PostPage**: Detailed view of an individual post.
++ **PostsPage**: List views of posts and videos on the Homepage, Feed page, Profile page, and Following page, where posts and video posts by followed users are displayed.
++ **VideoPost**: Component to display video posts.
++ **VideoPostCreateForm & VideoPostEditForm**: Forms used to create abd edit video posts.
++ **VideoPostPage**: Detailed view of an individual video post.
+
+Profiles:
++ **PopularProfiles**: Display the most popular profiles.
++ **Profile**: Display the profile owner details.
++ **ProfileEditForm**: Form used to edit user profile.
++ **ProfilePage**: Display all posts and video posts that created by the profile owner.
++ **UserPasswordForm**: Form used to edit password to login.
++ **UsernameForm**: Form used to edit username of the profile owner.
 
 ### Feature
 
