@@ -54,7 +54,7 @@ List of Epics:
    + Epic 4: The Posts Page
    + Epic 5: The Post/Video Post Page
    + Epic 6: The Comment Page
-   + Epic 7: Adding and deleting a comment on a Post/ VideoPost
+   + Epic 7: Editing comment on a Post/ VideoPost
    + Epic 8: The Profile Page
    + Epic 9: Followers and following
    + Epic 10: Copy a link for a Post/ VideoPost
