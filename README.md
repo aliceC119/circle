@@ -98,7 +98,8 @@ List of Epics:
 
  ### Colour scheme
 
-<img width="2062" alt="color scheme" src="https://github.com/user-attachments/assets/a12f4be4-ec09-471e-8d96-4183ed2af3de" />
+
+<img width="1684" alt="color chart" src="https://github.com/user-attachments/assets/bad83b01-3b89-4178-9b44-c0b8d5b390f8" />
 
 
 The color palette was thoughtfully selected to create a warm and welcoming atmosphere for our users. A variety of colors were used such as plum, rosy, orange, and purple, balanced against shades of white, light grey, and blue. This combination not only enhances visual appeal but also draws users' attention, encouraging them to engage more with the site.
