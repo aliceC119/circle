@@ -334,7 +334,57 @@ Profiles:
 
 ## Testing 
 + Due to time constraints, only a limited number of tests could be performed.
-+ Manual tests were conducted frequently.
+  
+### Manual Testing
+
+
+**Testing user stories**
+
+Epic 1: Navigation and authentication
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/1  | As a user I can view a Navbar from every page so that I can navigate easily between pages| Open every page in the application | Navbar should be well-organizsed and visible on all pages. Navbar should be function well between pages. Navbar should respond on all screensizes.|:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/2  | As a user I can navigate through pages quickly so that I can view content seamlessly without page refresh| Click on the logo of home, signin, signup in every page in the application and enterted an invalid link | It should take me to the appropriate links when I click on the logo, home, signin, signup links. If an invalid link is entered, it should lead to a page not found.|:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/3 | As a user I can create a new account so that I can access all the features for signed up users| Did not complete all fields in the Sign up form. Filled up all field in the Sign up form and logged in as a successful user. | The form should not be accepted if the fields are left blank. Successfully logged in user should be redirected to login page. The logged in user should be reflected in the profile page. |:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/4 | As a user I can sign in to the app so that I can access functionality for logged in users | Logged in an account with the correct log in detail. | Login should be accepted with a valid username and password. After successful login, the user should be redirected to the home page. If the user ID or password is invalid, an error message should appear. |:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/5 |As a user I can tell if I am logged in or not so that I can log in if I need to| Logged in to an account.| If you log in successfully, your user name should appear on the Navbar. The user name should only appear when the user is logged in. The user name should only appear when the user is logged in.| :x: |
+| https://github.com/aliceC119/circle/issues/6 | As a user I can maintain my logged-in status until I choose to log out so that my user experience is not compromised| Logged in to an account and clicked on log out button| The user should be logged in until the log out function is called by the user. Session tokens should be refreshed periodically to improve security without disruption to the user experience. If the user clicks Sign Out, the session ends immediately. |:heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/7 |As a logged out user I can see sign in and sign up options so that I can sign in/sign up | Clicked on the log out button and check the homepage| Both the 'Sign In' and 'Sign Up' options are visible and accessible on the home page for users who are logged out. After logging out, it should be easy to navigate back to the home page. Once a user has logged out, their user name should not appear on the Navbar. |:heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/8| As a user I can I can view user's avatars so that I can easily identify users of the application | Logged in to an account and check for the profule picture and Avatar| The profile picture of the user should be reflected in the avatar, if no profile picture is given then the default picture should be displayed. Avatar should be in the shape of a circle.|:heavy_check_mark: |
+
+Epic 2: Adding and liking or disliking Posts
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/9 | 	As a logged in user I can create post so that I can share my images with the world! |Created a post| The user should be able to upload an image and also change the image. Clicking the Create button should update the post on the API. This newly created post should be reflected on the user's post page. Clicking on the Cancel button should take the user back to the home page. |:heavy_check_mark:  |
+| https://github.com/aliceC119/circle/issues/10 | As a user I can view the details of a single post so that I can learn more about it| Clicked into a created post.| The post should have the profile picture and date created. The post should also have icons for like, comment and copy the link.|:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/11  | As a logged in user I can like/dislike a post so that I can show my thought for the posts that interest me or not | Clicked the like button in a post then clicked the like button again to dislike a post| When you click the Like icon, the colour of the icon should change to indicate that the post has been liked. When you click the Like icon again, the colour of the icon should change back to indicate that the post has not been liked. The count of likes for a post should be displayed next to the icon. |:heavy_check_mark: |
+
+Epic 3: Adding and liking or disliking VideoPosts
+  
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/12 | As a logged in user I can create video post so that I can share my beloved Youtube video with other users| Created a video post with a YouTube URL link | The user should be able to upload a YouTube URL and also change other YouTube URL. Clicking the Create button should update the video post on the API. This newly created video post should be reflected on the user's post page. Clicking on the Cancel button should take the user back to the home page.|:heavy_check_mark:  |
+| https://github.com/aliceC119/circle/issues/13 | 	As a user I can view the details of a single video post so that I can learn more about it| Clicked into a created video post and check| The video post should have the profile picture and date created. The video post should also have icons for like, comment and copy the link.|:heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/14 | As a logged in user I can like/dislike a video post so that I can show my thought for the video posts that interest me or not | Clicked the like button on a video post then clicked the like button again to dislike the video post | When you click the Like icon, the colour of the icon should change to indicate that the video post has been liked. When you click the Like icon again, the colour of the icon should change back to indicate that the video post has not been liked. The count of likes for a video post should be displayed next to the icon.|:heavy_check_mark:|
+
+Epic 4: The PostsPage
+  
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/15 | As a user I can view the posts page so that I can read the comments about the post and the video post|Logged in to an account and view the posts and video posts on the posts page | All logged-in users can read the comments on a post or a video post. Only the number of comments on a post or a video post, not the content of the comments, can be viewed by all logged in users.|:heavy_check_mark: |
+
+Epic 5: The Post/Video Post Page
+  
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/16  | As a post/ video post owner I can edit my post title and description so that I can make corrections or update my post/ video post after it was created| Clicked on a post and a video post to edit the title and description, then went back to the homepage to check edited post and video post | I should be able to change my image/ YoutTube URL and all the content on the post/ video post that already exists. The edited post / video post should appear on my posts page instead of the previous one. |:heavy_check_mark:|
+
+Epic 6: The Comment Page
+  
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
 
 ### Validator Testing
 
