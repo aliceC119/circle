@@ -325,6 +325,7 @@ Profiles:
 + [Canva](https://www.canva.com/)
 + [Favison.io](https://favicon.io/)
 + [Coolors](https://coolors.co/)
++ [balsamiq](https://balsamiq.com/)
 
 ### Frameworks:
 + [React](https://react.dev/)
