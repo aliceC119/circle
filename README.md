@@ -382,7 +382,7 @@ Epic 5: The Post/Video Post Page
   
 | Id | User Story | Action| Expected Result | Pass |
 | -- | ---------- | ----------- | ----------- |----------- |
-| [#16](https://github.com/aliceC119/circle/issues/16)  | As a post/ video post owner I can edit my post title and description so that I can make corrections or update my post/ video post after it was created| Clicked on a post and a video post to edit the title and description, then went back to the homepage to check edited post and video post | I should be able to change my image/ YoutTube URL and all the content on the post/ video post that already exists. The edited post / video post should appear on my posts page instead of the previous one. |:heavy_check_mark:|
+| [#16](https://github.com/aliceC119/circle/issues/16)  | As a post/ video post owner I can edit my post title and description so that I can make corrections or update my post/ video post after it was created| Clicked on a post and a video post to edit the title and description, then went back to the homepage to check edited post and video post | I should be able to change my image/ YouTube URL and all the content on the post/ video post that already exists. The edited post / video post should appear on my posts page instead of the previous one. |:heavy_check_mark:|
 
 Epic 6: The Comment Page
   
