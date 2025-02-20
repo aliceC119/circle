@@ -391,6 +391,11 @@ Epic 6: The Comment Page
 | https://github.com/aliceC119/circle/issues/18 | As a user I can see how long ago a comment was made so that I know how old a comment is| clicked into a post and a video post with comments and check| If the comment has been added, it should appear next to the username. It should be in the form of (weeks, then days)|:heavy_check_mark:|
 | https://github.com/aliceC119/circle/issues/19 | As a user I can read comments on posts/ video posts so that I can read what other users think about the posts/ video posts| Logged in to an account and clicked into a post and a video post with comments and check for the created date of the comments. Logged out the account and clicked into the post and video post with comment and check for the created date of the comments | All users have access to view all comments on posts. The view of the comment is sorted from newest to oldest. |:heavy_check_mark:|
 | https://github.com/aliceC119/circle/issues/20 | As an owner of a comment I can delete my comment so that I can control removal of my comment from the application| Logged in to an account and made a comment, then delete the comment and checked for the number of comment in the comment icon | Deleting a comment should only be possible for the owner of the comment and the admin. When a comment is removed, the number of comments should go down. | :heavy_check_mark: |
+
+Epic 7: Editing comment on a Post/ VideoPost
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
 | https://github.com/aliceC119/circle/issues/21 | As an owner of a comment I can edit my comment so that I can fix or update my existing comment | Logged in to an account and made a comment to a post and a video post. Looked for the the dropdown menu to edit the comment| The owner of the comment should only be given the option to edit the comment. The dropdown option for accessing, editing and deleting should only appear to the user according to their comments. The edit option should not be visible to users who are not the comment owner. |:x:|
 
 Epic 8: The Profile Page
