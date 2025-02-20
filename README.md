@@ -47,10 +47,10 @@ I planned this project using an Agile methodology. The implementation was carrie
 
 Circle is a social platform for individuals who are passionate about their interests in life and want to share their life ideas with others. It serves as an online community for like-minded people to connect and share moments, fostering a sense of connection and shared experience.
 
-List od Epics:
+List of Epics:
    + Epic 1: Navigation and authentication
    + Epic 2: Adding and liking or disliking Posts
-   + Epic 3: Adding and liking ot disliking VideoPosts
+   + Epic 3: Adding and liking or disliking VideoPosts
    + Epic 4: The Posts Page
    + Epic 5: The Post/Video Post Page
    + Epic 6: The Comment Page
