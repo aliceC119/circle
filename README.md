@@ -374,6 +374,7 @@ Epic 4: The PostsPage
 | Id | User Story | Action| Expected Result | Pass |
 | -- | ---------- | ----------- | ----------- |----------- |
 | https://github.com/aliceC119/circle/issues/15 | As a user I can view the posts page so that I can read the comments about the post and the video post|Logged in to an account and view the posts and video posts on the posts page | All logged-in users can read the comments on a post or a video post. Only the number of comments on a post or a video post, not the content of the comments, can be viewed by all logged in users.|:heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/28 | As a user I can view both posts and video posts on Home, Feed, Liked and Profile page so that I can stay updated on the activities of other users | Logged in/out to an account and clicked to the Homepage, Feed page, Liked page and Profile page to check the posts and video posts within these pages | All created posts should be displayed on the Home and Feed pages. They should also appear on the Liked page when they receive likes, and on the Profile page when they were created by the profile owner. All created video posts should be displayed on the Home and Feed pages. They should also appear on the Liked page when they receive likes, and on the Profile page when they were created by the profile owner. Both created posts and video posts should be displayed on the Home and Feed pages. They should also appear on the Liked page when they receive likes, and on the Profile page when they were created by the profile owner. | :heavy_check_mark: |
 
 Epic 5: The Post/Video Post Page
   
@@ -385,6 +386,33 @@ Epic 6: The Comment Page
   
 | Id | User Story | Action| Expected Result | Pass |
 | -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/17  | As a logged in user I can add comments to a post so that I can share my thoughts about the post / video post| Logged in to an account and made comments to a post and a video post. Logged out my account and click into a post and a video post to view the comment field| Only logged in users are allowed to post a comment on a post/video. Comments should appear at the bottom of the post /video post, along with the username. The number of comments should reflect on the post /video post. |:heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/18 | As a user I can see how long ago a comment was made so that I know how old a comment is| clicked into a post and a video post with comments and check| If the comment has been added, it should appear next to the username. It should be in the form of (weeks, then days)|:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/19 | As a user I can read comments on posts/ video posts so that I can read what other users think about the posts/ video posts| Logged in to an account and clicked into a post and a video post with comments and check for the created date of the comments. Logged out the account and clicked into the post and video post with comment and check for the created date of the comments | All users have access to view all comments on posts. The view of the comment is sorted from newest to oldest. |:heavy_check_mark:|
+| https://github.com/aliceC119/circle/issues/20 | As an owner of a comment I can delete my comment so that I can control removal of my comment from the application| Logged in to an account and made a comment, then delete the comment and checked for the number of comment in the comment icon | Deleting a comment should only be possible for the owner of the comment and the admin. When a comment is removed, the number of comments should go down. | :heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/21 | As an owner of a comment I can edit my comment so that I can fix or update my existing comment | Logged in to an account and made a comment to a post and a video post. Looked for the the dropdown menu to edit the comment| The owner of the comment should only be given the option to edit the comment. The dropdown option for accessing, editing and deleting should only appear to the user according to their comments. The edit option should not be visible to users who are not the comment owner. |:x:|
+
+Epic 8: The Profile Page
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/22 | As a user I can view other users profiles so that I can see their posts and learn more about them | Logged in to an account and view the other users profiles. Added comments to their posts and video posts  | The user can only view the profile of others and does not have access to edit the post. Users can add a comment to their posts/videos. | :heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/26 | 	As a logged in user I can I can edit my profile so that I can change my profile picture and bio | Logged in to an account and clicked to the profile page. searched for the dropdown menu and edited my details such as Username, Password and changed profile picture | All logged in users should see a drop down menu in the top right hand corner of their profile page. The options Edit Profile, Change Username and Change Password should be available in the drop down menu to allow the user to change their bio, username and password. The Change Image option should be visible on the Edit Profile page, allowing the user to change their profile image. | :heavy_check_mark:  |
+
+Epic 9: Followers and following
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/23 | As a user I can see a list of the most followed profiles so that I can see which profiles are popular | Logged in/out to an account to view the Most Followed Profiles columnunder the NavBar | The list of most followed profiles should be visible in the Most Followed Profiles column below the NavBar at the top right. | :heavy_check_mark:  |
+| https://github.com/aliceC119/circle/issues/24 | As a user I can view statistic about a specific user: bio, number of posts, follows and users followed so that I can learn more about them | Loggin/out to an account and clicked to the profile page and viewed the display details | Clicking on a user's profile should display details such as bio, number of posts, followers and users followed. | :heavy_check_mark: |
+| https://github.com/aliceC119/circle/issues/25 | As a logged in user I can follow and unfollow other users so that I can see and remove posts by specific users in my posts feed | Logged in to an account and clicked the follow button of an user. Then clicked to Feed page to view all posts and video posts from the user I followed. Unclicked the follow button of an user and clicked to the Feed page to check if the posts and video posts of the unfollowed user still there. | All logged in users should see a follow button in the top right corner of the profile page. All logged in users can click the follow button to indicate that they wish to follow this particular profile. All logged in users can also click the unfollow button to unfollow the specific profile. After users followed the profile, all posts/videos from that particular profile would also appear on the user's Feed page. After users unfollowed the profile, all posts/video clips from that profile would disappear from the user's Feed page.| :heavy_check_mark: |
+
+Epic 10: Copy a link for a Post/ VideoPost
+
+| Id | User Story | Action| Expected Result | Pass |
+| -- | ---------- | ----------- | ----------- |----------- |
+| https://github.com/aliceC119/circle/issues/27 | As a user I can click on the copy link button so that copy the post/ video post by getting the URL links | Logged in/out to an account and clicked the copy the link icon in a post or video post | A copy link icon should be visible on the post/video post. Users should be able to click on the icon and a URL to the post/video post should be automatically generated. Users can use this link for their own use.| :heavy_check_mark:  |
+
 
 ### Validator Testing
 
