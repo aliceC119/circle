@@ -336,7 +336,6 @@ Profiles:
 + [React Infinite Scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
 
 ## Testing 
-+ Due to time constraints, only a limited number of tests could be performed.
   
 ### Manual Testing
 
@@ -496,7 +495,7 @@ The videos in the project are sourced from [Youtube](https://www.youtube.com/)
 
 ### Acknowledgements
 
- + Many thanks to the Student Support team for helping me with this project, especially Rebecca, Sarah, Oisín, and Roman. Their assistance was invaluable; they supported me every time I got stuck and always tried their best to help me resolve issues. Thank you also to my mentor, Gareth, for showing his support.
+ + Many thanks to the Student Support team for helping me with this project, especially Rebecca, Sarah, Oisin, and Roman. Their assistance was invaluable; they supported me every time I got stuck and always tried their best to help me resolve issues. Thank you also to my mentor, Gareth, for showing his support.
 + This project is for educational use.
 
 
