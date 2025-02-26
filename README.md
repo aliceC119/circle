@@ -398,7 +398,7 @@ Epic 7: Editing comment on a Post/ VideoPost
 
 | Id | User Story | Action| Expected Result | Pass |
 | -- | ---------- | ----------- | ----------- |----------- |
-| [#21](https://github.com/aliceC119/circle/issues/21) | As an owner of a comment I can edit my comment so that I can fix or update my existing comment | Logged in to an account and made a comment to a post and a video post. Looked for the the dropdown menu to edit the comment| The owner of the comment should only be given the option to edit the comment. The dropdown option for accessing, editing and deleting should only appear to the user according to their comments. The edit option should not be visible to users who are not the comment owner. |:x:|
+| [#21](https://github.com/aliceC119/circle/issues/21) | As an owner of a comment I can edit my comment so that I can fix or update my existing comment | Logged in to an account and made a comment to a post and a video post. Looked for the the dropdown menu to edit the comment| The owner of the comment should only be given the option to edit the comment. The dropdown option for accessing, editing and deleting should only appear to the user according to their comments. The edit option should not be visible to users who are not the comment owner. |:heavy_check_mark:|
 
 Epic 8: The Profile Page
 
